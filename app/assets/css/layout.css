@@ -1,0 +1,35 @@
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+#root {
+    width: 500px;
+    margin: 0 auto;
+    background: #fafafa;
+    border-radius: 5px;
+    padding: 10px;
+}
+.person-list {
+    background: #fafafa;
+    margin: 5px;
+    padding: 5px;
+}
+.detail {
+    float: left;
+}
+.action {
+    float: right;
+}
+.person {
+    margin-bottom: 10px;
+}
+.add-person{
+    margin-bottom: 10px;
+}
+.add-person input {
+    margin-right: 10px;
+}
