@@ -16,7 +16,7 @@ var PersonList = createReactClass({
         );
     }
 });
-var getPersons = (state) => {
-    return { persons: state.persons.list};
+var getPersonsStateToProps = state => {
+    return { persons: state.personReducer.persons };
 }
-module.exports = connect(getPersons)(PersonList);
+module.exports = connect(getPersonsStateToProps)(PersonList);

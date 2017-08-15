@@ -15,7 +15,7 @@ var AddPerson = createReactClass({
         );
     },
     addPerson(){
-        var {dispatch} = this.props;
+        var {dispatch} = this.props;    
         dispatch(addPerson({name: this.inputName.value, age: this.inputAge.value}));
     }
 });

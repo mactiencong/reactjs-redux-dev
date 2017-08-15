@@ -1,4 +1,4 @@
 var redux = require("redux");
 var personReducer = require("./persons");
-var reducer = redux.combineReducers({persons: personReducer});
+var reducer = redux.combineReducers({personReducer});
 module.exports = reducer;

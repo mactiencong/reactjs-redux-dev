@@ -11,14 +11,15 @@ var Person = createReactClass({
                     Name: {this.props.person.name } - Age: {this.props.person.age}
                 </div>
                 <div className="action">
-                    <a href="#" onClick={this.delete}>Delete</a>
+                    <a href="#" onClick={()=>{this.props.deletePerson(this.props.index)}}>Delete</a>
                 </div>
             </div>
         );
-    },
-    delete(index){
-        var {dispatch, index} = this.props;
-        dispatch(deletePerson(index));
-    },
+    }
 });
-module.exports = connect()(Person);
+var deletePersonDispatchToProps = dispatch => {
+    return({
+        deletePerson: index => {dispatch(deletePerson(index))}
+    })
+}
+module.exports = connect(null, deletePersonDispatchToProps)(Person);
